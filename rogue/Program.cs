@@ -22,26 +22,26 @@ namespace rogue
 
         public int x
         {
-            get { return x; }
-            set { x = value; }
+            get { return X; }
+            set { X = value; }
         }
 
         protected int Y;
 
         public int y
         {
-            get { return y; }
-            set { y = value; }
+            get { return Y; }
+            set { Y = value; }
         }
 
         public enum TileType { Hero, Enemy, Weapon, Gold };
 
-        //private TileType currentTile;
+        private TileType currentTile;
 
         public TileType getTile
         {
-            get { return getTile; }
-            set { getTile = value; }
+            get { return currentTile; }
+            set { currentTile = value; }
         }
 
         public Tile(int xPos, int yPos)
@@ -80,7 +80,7 @@ namespace rogue
         }
     }
 
-    abstract class Character : Tile
+    abstract class  Character : Tile
     {
 
         //protected int newX;
