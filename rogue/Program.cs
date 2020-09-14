@@ -46,8 +46,8 @@ namespace rogue
 
         public Tile(int xPos, int yPos)
         {
-            xPos = 0;
-            yPos = 0;
+            X = xPos;
+            Y = yPos;
             getTile = TileType.Hero;
         }
     }
@@ -58,9 +58,9 @@ namespace rogue
         private Obstacle(int xPos, int yPos) : base(xPos, yPos)
         {
 
-            xPos = 0;
+            X = xPos;
 
-            yPos = 0;
+            Y = yPos;
 
         }
 
@@ -71,11 +71,10 @@ namespace rogue
         private emptyTile(int xPos, int yPos) : base(xPos, yPos)
         {
 
-            xPos = 0;
 
-            yPos = 0;
+            X = xPos;
 
-
+            Y = yPos;
 
         }
     }
@@ -90,6 +89,11 @@ namespace rogue
         private Character(int xPos, int yPos, char symbol) : base(xPos, yPos)
         {
 
+            X = xPos;
+
+            Y = yPos;
+         
+            
         }
 
         protected int HP;
@@ -169,7 +173,7 @@ namespace rogue
         private int DistanceTo(Character target)
         {
 
-            return Math.Abs((this.x - target.x) + (this.y - target.y));
+            return Math.Abs((this.X - target.X) + (this.Y - target.Y));
 
         }
 
@@ -180,25 +184,25 @@ namespace rogue
             {
                 case movement.down:
                     {
-                        y--;
+                        Y--;
                         break;
                     }
 
                 case movement.up:
                     {
-                        y++;
+                        Y++;
                         break;
                     }
 
                 case movement.left:
                     {
-                        x--;
+                        X--;
                         break;
                     }
 
                 case movement.right:
                     {
-                        x++;
+                        X++;
                         break;
                     }
 
