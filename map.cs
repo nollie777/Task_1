@@ -63,11 +63,9 @@ public class Map
 	private Tile Create(TileEnum type)
     {
 
-		X = rando.Next(minWidth, maxWdith);
+		X = rando.Next(minWidth, maxWdith); 
 
 		Y = rando.Next(minHeight, maxHeight);
-
-
 
     }
 
